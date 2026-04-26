@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NX-OS VXLAN/EVPN Config Generator</title>
+  <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,8 +13,11 @@
 
   <header>
     <div class="header-inner">
-      <h1>NX-OS VXLAN/EVPN Config Generator</h1>
-      <p>MP-BGP EVPN &middot; OSPF + PIM SM Underlay</p>
+      <div>
+        <h1>NX-OS VXLAN/EVPN Config Generator</h1>
+        <p>MP-BGP EVPN &middot; OSPF + PIM SM Underlay</p>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Dark</button>
     </div>
   </header>
 
@@ -31,7 +35,7 @@
           </label>
           <label class="field">
             <span>Leaves</span>
-            <input type="number" id="leaf_count" name="leaf_count" value="4" min="1" max="32" required>
+            <input type="number" id="leaf_count" name="leaf_count" value="2" min="1" max="32" required>
           </label>
           <label class="field">
             <span>BGP ASN</span>
@@ -39,7 +43,7 @@
           </label>
           <label class="field">
             <span>OSPF Process</span>
-            <input type="text" name="ospf_process" value="Underlay" required>
+            <input type="text" name="ospf_process" value="UNDERLAY" required>
           </label>
           <label class="field">
             <span>OSPF Area</span>

@@ -16,6 +16,22 @@
     --th-bg:       #eef2f7;
 }
 
+[data-theme="dark"] {
+    --bg:          #0d1b2a;
+    --card:        #112236;
+    --border:      #1c3050;
+    --accent:      #4da3ff;
+    --accent-dk:   #2d8aee;
+    --text:        #dce9f7;
+    --muted:       #6b8fb5;
+    --danger:      #e06c6c;
+    --success:     #2daa6a;
+    --input-bg:    #0a1928;
+    --header-bg:   #070f1a;
+    --tab-active:  #4da3ff;
+    --th-bg:       #0a1928;
+}
+
 body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background: var(--bg);
@@ -31,8 +47,29 @@ header {
     padding: 1.1rem 2rem;
     border-bottom: 2px solid #0068d6;
 }
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
 .header-inner h1  { font-size: 1.35rem; font-weight: 600; }
 .header-inner p   { color: #7aadd4; font-size: 0.8rem; margin-top: 0.2rem; }
+
+.theme-toggle {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.25);
+    color: #c8dff5;
+    padding: .3rem .8rem;
+    border-radius: 5px;
+    font-size: .8rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background .15s, border-color .15s;
+}
+.theme-toggle:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.45); }
 
 /* ── Layout ─────────────────────────────────────────────────────────────── */
 main { max-width: 1080px; margin: 2rem auto 5rem; padding: 0 1.25rem; }

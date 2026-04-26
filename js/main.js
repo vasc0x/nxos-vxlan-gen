@@ -5,7 +5,7 @@ let vlanRowIndex = 0;
 
 function buildDeviceForms() {
   const spineCount = parseInt(document.getElementById('spine_count').value) || 2;
-  const leafCount = parseInt(document.getElementById('leaf_count').value) || 4;
+  const leafCount = parseInt(document.getElementById('leaf_count').value) || 2;
 
   buildSection('spine', spineCount, buildSpinePanel);
   buildSection('leaf', leafCount, buildLeafPanel);

@@ -449,6 +449,7 @@ foreach ($raw_leaves as $i => $l) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generated Configs &mdash; NX-OS VXLAN/EVPN</title>
+  <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <style>
     pre.config-block {
@@ -597,8 +598,11 @@ foreach ($raw_leaves as $i => $l) {
 
   <header>
     <div class="header-inner">
-      <h1>NX-OS VXLAN/EVPN Config Generator</h1>
-      <p>Generated configuration &mdash; <?= count($configs) ?> device(s)</p>
+      <div>
+        <h1>NX-OS VXLAN/EVPN Config Generator</h1>
+        <p>Generated configuration &mdash; <?= count($configs) ?> device(s)</p>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Dark</button>
     </div>
   </header>
 
